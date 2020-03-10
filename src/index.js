@@ -6,7 +6,7 @@ module.exports = function toReadable (number) {
 let dozens = {1: 'ten', 2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'seventy',
 8: 'eighty', 9: 'ninety', 100: 'one hundred'}
 
-let result;
+let result = '';
 
 if(number < 20){
   result = unit[number]
