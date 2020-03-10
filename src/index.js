@@ -29,5 +29,8 @@ if((number >= 100) && (number < 1000) && (number % 10)){
 if((('' + number)[1] == 1) && (number > 100) ){
 	result = unit[('' + number)[0]]  + ' hundred ' + unit[('' + number)[1]+('' + number)[2]];
 }
+if(number % 100 == 0){
+	result = unit[('' + number)[0]]  + ' hundred';
+}
 return result;
 }
