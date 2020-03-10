@@ -11,7 +11,10 @@ let result = '';
 if(number < 20){
   result = unit[number]
 }
-if((number >= 20) && (number < 100)){
+if(number % 10 == 0){
+  result = dozens[('' + number)[0]];
+}
+if((number >= 20) && (number < 100) && (number % 10)){
   result = dozens[('' + number)[0]] + ' ' + unit[('' + number)[1]];
 }
 if((n >= 100) && (n < 1000)){
