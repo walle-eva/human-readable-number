@@ -17,8 +17,11 @@ if(number % 10 == 0){
 if((number >= 20) && (number < 100) && (number % 10)){
   result = dozens[('' + number)[0]] + ' ' + unit[('' + number)[1]];
 }
-if((number >= 100) && (number < 1000)){
-  result = unit[('' + number)[0]]  + ' hundreds ' + dozens[('' + number)[1]] + ' ' + unit[('' + number)[2]];
+if((number >= 100) && (number < 1000) && (number % 10 == 0)){
+  result = unit[('' + number)[0]]  + ' hundred ' + dozens[('' + number)[1]];
+}
+if((number >= 100) && (number < 1000) && (number % 10)){
+  result = unit[('' + number)[0]]  + ' hundred ' + dozens[('' + number)[1]] + ' ' + unit[('' + number)[2]];
 }
 return result;
 }
