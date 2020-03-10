@@ -23,5 +23,11 @@ if((number >= 100) && (number < 1000) && (number % 10 == 0)){
 if((number >= 100) && (number < 1000) && (number % 10)){
   result = unit[('' + number)[0]]  + ' hundred ' + dozens[('' + number)[1]] + ' ' + unit[('' + number)[2]];
 }
+    if((('' + number)[1] == 0) && (number > 100)){
+	result = unit[('' + number)[0]]  + ' hundred ' + unit[('' + number)[2]];
+}
+if((('' + number)[1] == 1) && (number > 100) ){
+	result = unit[('' + number)[0]]  + ' hundred ' + unit[('' + number)[1]+('' + number)[2]];
+}
 return result;
 }
